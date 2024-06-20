@@ -4,7 +4,9 @@ function Home() {
   return (
     <div>
       <Navigation />
-      <h1>Gromidin Home</h1>
+      <div>
+        <h1>Gromidin Home</h1>
+      </div>
     </div>
   );
 }

@@ -2,13 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--basic-color);
 }
 
-.navigation ul {
+.menuItems {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 4rem;
+
+  padding-right: 100px;
 }
 
 .navigation a:link,
@@ -28,7 +31,52 @@
 
   border-bottom: 2px solid var(--dark-green);
 }
-.navigation a.logo {
+
+.menuItems.open {
+  background-color: var(--lighter-green);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 180px; /* TODO Adjust this value based on your header height */
+  left: 0;
+  width: 100%;
+  padding: 25px;
+
+  margin-top: 25px;
+}
+
+.menuItems.open li {
+  margin-bottom: 10px;
+}
+
+.menuItems.open a {
+  color: var(--dark-green);
+}
+
+.menuToggle {
+  display: none;
+  color: var(--dark-green);
+}
+
+/* Media query for mobile menu */
+@media screen and (max-width: 700px) {
+  .menuToggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: none; /* Hide the main menu items on small screens */
+  }
+
+  /* Center logo */
+  .navigation a.logo {
+    margin: 0 auto;
+    padding-left: 48px;
+  }
+}
+
+.logo {
   padding: 0;
 }
 
