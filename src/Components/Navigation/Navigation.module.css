@@ -1,0 +1,41 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.navigation a:link,
+.navigation a:visited {
+  text-decoration: none;
+  color: var(--light-green);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px 0;
+
+  /* letter-spacing: 2px; */
+}
+
+.navigation a:global(.active) {
+  color: var(--dark-green);
+
+  border-bottom: 2px solid var(--dark-green);
+}
+.navigation a.logo {
+  padding: 0;
+}
+
+.logoImg {
+  width: 200px;
+}
+
+.active {
+  text-decoration: line-through;
+}
