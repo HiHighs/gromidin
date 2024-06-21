@@ -1,13 +1,15 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import styles from './Navigation.module.css';
-import { useEffect, useState } from 'react';
-
+import { useEffect } from 'react';
 import Hamburger from 'hamburger-react';
 
-function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+type NavigationProps = {
+  mobileMenuOpen: boolean;
+  setMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
+function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProps) {
   function toggleMobileMenu() {
     document.body.classList.add('mobile-body');
     setMobileMenuOpen((prev) => !prev);

@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--basic-color);
+
+  max-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0rem 2rem;
 }
 
 .menuItems {
@@ -28,21 +33,22 @@
 
 .navigation a:global(.active) {
   color: var(--dark-green);
-
   border-bottom: 2px solid var(--dark-green);
 }
 
 .menuItems.open {
   background-color: var(--lighter-green);
-  display: flex;
-  flex-direction: column;
   position: absolute;
-  top: 180px; /* TODO Adjust this value based on your header height */
+  top: 158px; /* Adjust this value based on your design */
   left: 0;
   width: 100%;
+  bottom: 0; /* Fill the remaining vertical space */
   padding: 25px;
+  overflow-y: auto; /* Add vertical scrollbar if necessary */
 
-  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
 }
 
 .menuItems.open li {
@@ -72,18 +78,20 @@
   /* Center logo */
   .navigation a.logo {
     margin: 0 auto;
-    padding-left: 48px;
+    padding-left: 48px !important;
   }
 }
 
-.logo {
-  padding: 0;
+.navigation a.logo {
+  padding: 5px 0;
 }
 
 .logoImg {
-  width: 200px;
+  width: 185px;
 }
 
-.active {
-  text-decoration: line-through;
+@media screen and (max-width: 575px) {
+  .logoImg {
+    width: 150px;
+  }
 }

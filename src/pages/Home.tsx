@@ -1,13 +1,18 @@
+import { useState } from 'react';
+import Header from '../Components/Header/Header';
 import Navigation from '../Components/Navigation/Navigation';
 
 function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <div>
-      <Navigation />
-      <div>
-        <h1>Gromidin Home</h1>
-      </div>
-    </div>
+    <>
+      <Navigation
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+      />
+      {!mobileMenuOpen && <Header />}
+    </>
   );
 }
 
