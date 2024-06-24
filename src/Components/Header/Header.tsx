@@ -2,7 +2,7 @@ import HeaderImage from '../HeaderImage/HeaderImage';
 import ScrollDown from '../ScrollDown/ScrollDown';
 import styles from './Header.module.css';
 
-function Header() {
+function Header({ scrollToObjective }: { scrollToObjective: () => void }) {
   return (
     <header className={styles.header}>
       <HeaderImage />
@@ -35,7 +35,7 @@ function Header() {
         </div>
       </div>
 
-      <ScrollDown />
+      <ScrollDown scrollToObjective={scrollToObjective} />
     </header>
   );
 }

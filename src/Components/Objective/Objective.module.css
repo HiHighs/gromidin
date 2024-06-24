@@ -1,0 +1,90 @@
+.objective {
+  background-color: var(--darker-green);
+  padding: 120px 0;
+  height: 1700px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.imageContainer {
+  height: 260px;
+  width: 380px;
+  margin: 10px;
+
+  position: relative;
+  overflow: hidden;
+
+  opacity: 85%;
+  transition: all 0.5s ease;
+}
+
+.imageContainer:hover {
+  transition: all 0.5s ease;
+  opacity: 100%;
+}
+
+.imageContainer:hover > h3 {
+  font-size: 1.6rem;
+  transition: all 0.5s ease;
+}
+
+.imageContainer h3 {
+  color: var(--darker-green);
+  font-size: 1.5rem;
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.5s ease;
+}
+
+.imageContainer1 {
+  background: url('../../assets/Objective/beet.jpg') no-repeat center
+    center/cover;
+}
+
+.imageContainer2 {
+  background: url('../../assets/Objective/digital_farming.jpg') no-repeat center
+    center/cover;
+}
+
+.imageContainer3 {
+  background: url('../../assets/Objective/plant.jpg') no-repeat center
+    center/cover;
+}
+
+@media screen and (max-width: 1220px) {
+  .imageContainer {
+    height: 200px;
+    width: 300px;
+  }
+
+  .imageContainer h3 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .imageContainer {
+    height: 350px;
+    width: 500px;
+    margin: 20px;
+  }
+  .imageContainer h3 {
+    font-size: 1.5rem;
+  }
+}

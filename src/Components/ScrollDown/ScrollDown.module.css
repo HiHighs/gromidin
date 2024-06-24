@@ -12,7 +12,7 @@
 }
 
 .imgContainer {
-  border: 2px var(--dark-green) solid;
+  border: 2px var(--darker-green) solid;
   padding: 8px;
   border-radius: 50%;
   background-color: var(--lighter-green);
