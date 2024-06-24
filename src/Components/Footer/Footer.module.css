@@ -1,0 +1,38 @@
+.footer {
+  background-color: var(--lighter-green);
+  padding: 50px 0 60px;
+}
+
+.logo {
+  max-width: 250px;
+  margin-bottom: 40px;
+}
+
+.footer p {
+  font-size: 1.8rem;
+  color: var(--darker-green);
+  margin-bottom: 10px;
+}
+
+.footer p a {
+  color: var(--dark-green);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer p a:hover {
+  color: var(--light-green);
+  transition: all 0.3s ease;
+}
+
+.contact {
+  margin-top: 30px;
+  display: inline-block;
+  color: var(--lighter-green);
+  background-color: var(--dark-green);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
