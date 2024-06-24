@@ -1,0 +1,36 @@
+.scrollDown {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  bottom: -35px;
+}
+
+.imgContainer {
+  border: 2px var(--dark-green) solid;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--lighter-green);
+  box-sizing: border-box;
+  cursor: pointer;
+  opacity: 80%;
+  transition: opacity 0.3s ease;
+}
+
+.imgContainer:hover {
+  opacity: 100%;
+}
+
+.img {
+  transition: transform 0.3s ease;
+  transform: translateY(3px);
+}
+
+.img:hover {
+  transform: translateY(10px);
+}

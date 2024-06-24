@@ -1,10 +1,12 @@
 import HeaderImage from '../HeaderImage/HeaderImage';
+import ScrollDown from '../ScrollDown/ScrollDown';
 import styles from './Header.module.css';
 
 function Header() {
   return (
     <header className={styles.header}>
       <HeaderImage />
+
       <div className={styles.content}>
         <div className={styles.textContent}>
           <h1>
@@ -32,6 +34,8 @@ function Header() {
           </p>
         </div>
       </div>
+
+      <ScrollDown />
     </header>
   );
 }

@@ -1,7 +1,7 @@
 .header {
   position: relative;
   min-height: 70vh;
-  overflow: hidden;
+  /* overflow-x: hidden; */
 }
 
 .content {
