@@ -36,3 +36,9 @@
   text-decoration: none;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 450px) {
+  .footer p {
+    padding: 0px 30px;
+  }
+}
