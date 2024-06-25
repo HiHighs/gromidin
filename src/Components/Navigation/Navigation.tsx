@@ -26,7 +26,7 @@ function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProps) {
     window.addEventListener('resize', resize);
 
     return () => window.removeEventListener('resize', resize);
-  }, []);
+  }, [setMobileMenuOpen]);
 
   return (
     <nav className={styles.navigation}>
