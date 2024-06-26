@@ -6,6 +6,8 @@ import styles from './Contact.module.css';
 import ContactInfo from '../Components/ContactInfo/ContactInfo';
 import Footer from '../Components/Footer/Footer';
 import ContactForm from '../Components/ContactForm/ContactForm';
+// import Map from '../Components/Map/Map';
+import MapLeaf from '../Components/Map/Map';
 
 function Contact() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,6 +30,7 @@ function Contact() {
 
       {!mobileMenuOpen && <ContactInfo />}
       {!mobileMenuOpen && <ContactForm />}
+      {!mobileMenuOpen && <MapLeaf address='Bergenstraat 158, 3052 Blanden' />}
       {!mobileMenuOpen && <Footer />}
     </>
   );

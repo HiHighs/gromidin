@@ -28,7 +28,7 @@
 .contact {
   margin-top: 30px;
   display: inline-block;
-  color: var(--lighter-green);
+  color: var(--basic-color);
   background-color: var(--dark-green);
   font-size: 1.5rem;
   text-transform: uppercase;
