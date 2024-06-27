@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Navigation from '../Components/Navigation/Navigation';
 import Header from '../Components/Header/Header';
 import image from '../assets/contact.jpg';
@@ -11,6 +11,13 @@ import MapLeaf from '../Components/Map/Map';
 
 function Contact() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const contactInfoRef = useRef<HTMLDivElement>(null);
+
+  function scrollToContactInfo() {
+    if (contactInfoRef.current) {
+      contactInfoRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   return (
     <>
@@ -22,13 +29,17 @@ function Contact() {
       {!mobileMenuOpen && (
         <Header image={image} alignText='center'>
           <div className={styles.textContent}>
-            <h2>Contact Us</h2>
+            <h2 onClick={scrollToContactInfo}>Contact Us</h2>
             <h1>Get In Touch</h1>
           </div>
         </Header>
       )}
 
-      {!mobileMenuOpen && <ContactInfo />}
+      {!mobileMenuOpen && (
+        <div ref={contactInfoRef}>
+          <ContactInfo />
+        </div>
+      )}
       {!mobileMenuOpen && <ContactForm />}
       {!mobileMenuOpen && <MapLeaf address='Bergenstraat 158, 3052 Blanden' />}
       {!mobileMenuOpen && <Footer />}
