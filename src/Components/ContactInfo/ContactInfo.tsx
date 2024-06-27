@@ -3,7 +3,7 @@ import styles from './ContactInfo.module.css';
 function ContactInfo() {
   return (
     <div className={styles.contactInfo}>
-      <h2>Our contact info</h2>
+      <h2>Contact info</h2>
       <div className={styles.infoContainer}>
         <p className={styles.right}>
           Gromidin BV
