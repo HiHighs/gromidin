@@ -45,6 +45,9 @@ function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProps) {
           <NavLink to='/'>Home</NavLink>
         </li>
         <li>
+          <NavLink to='/mission'>Mission</NavLink>
+        </li>
+        <li>
           <NavLink to='/about'>About</NavLink>
         </li>
         <li>

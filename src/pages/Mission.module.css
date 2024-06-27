@@ -1,0 +1,92 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--lighter-green);
+  text-align: left;
+  padding: 50px 50px 20px 50px;
+  font-size: 1.7rem;
+  color: var(--darker-green);
+  border-radius: 10px;
+  margin-bottom: 75px;
+  margin-top: 25px;
+}
+
+.container h1 {
+  font-size: 4rem;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.container p {
+  padding: 25px 0;
+}
+
+.goals {
+  list-style: none;
+}
+
+.goals li {
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.goals li::before {
+  content: '⮚';
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+.parts {
+  list-style: none;
+  border-top: 1px solid var(--darker-green);
+}
+
+.parts h2 {
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.parts h2 strong {
+  margin-left: 5px;
+}
+
+.parts ul {
+  list-style: none;
+}
+
+.parts li {
+  padding: 5px;
+}
+
+.part {
+  margin-top: 20px;
+}
+
+.part li {
+  margin-left: 20px;
+}
+
+.part li::before {
+  content: '✓';
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+.part li li {
+  padding: 6px 0;
+}
+
+.part li li::before {
+  content: '-';
+  padding-right: 5px;
+}
+
+.parts > .part:nth-of-type(2) ul ul > li:first-child {
+  padding-top: 15px;
+}
+
+.part p {
+  padding: 0px 50px 20px 25px;
+  line-height: 2.2rem;
+}
