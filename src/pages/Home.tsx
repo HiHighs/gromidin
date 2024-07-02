@@ -4,7 +4,7 @@ import Navigation from '../Components/Navigation/Navigation';
 import Objective from '../Components/Objective/Objective';
 import Footer from '../Components/Footer/Footer';
 import styles from './Home.module.css';
-import image from '../assets/drone_HQ_blurry.png';
+import image from '../assets/drone_LQ_blurry.png';
 
 function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,7 +36,8 @@ function Home() {
             </h1>
             <p>
               Because of the changing situation in European / Regional
-              legislaton for farming, growers will evolve to more{' '}
+              legislation for farming (The European Directive for sustainable
+              use of pesticides) , growers will evolve to more{' '}
               <strong>digital support</strong> in their daily business.
             </p>
             <p>
