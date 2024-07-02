@@ -1,14 +1,13 @@
 .container {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 25px auto 75px;
   background-color: var(--lighter-green);
   text-align: left;
-  padding: 50px 50px 20px 50px;
+  padding: 50px;
   font-size: 1.7rem;
   color: var(--darker-green);
   border-radius: 10px;
-  margin-bottom: 75px;
-  margin-top: 25px;
+  line-height: 1.8;
 }
 
 .container h1 {
@@ -21,21 +20,29 @@
   padding: 25px 0;
 }
 
+/* Goals Section */
 .goals {
   list-style: none;
+  padding-left: 20px;
 }
 
 .goals li {
-  margin-left: 20px;
-  padding: 5px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .goals li::before {
-  content: '⮚';
+  content: '▶';
   font-weight: 600;
   padding-right: 5px;
 }
 
+.goals li:hover {
+  color: var(--hover-color);
+}
+
+/* Parts Section */
 .parts {
   list-style: none;
   border-top: 1px solid var(--darker-green);
@@ -55,22 +62,25 @@
   list-style: none;
 }
 
-.parts li {
-  padding: 5px;
-}
-
 .part {
   margin-top: 20px;
+  padding-left: 20px;
 }
 
 .part li {
-  margin-left: 20px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .part li::before {
   content: '✓';
   font-weight: 600;
   padding-right: 5px;
+}
+
+.part li:hover {
+  color: var(--hover-color);
 }
 
 .part li li {
@@ -87,6 +97,35 @@
 }
 
 .part p {
-  padding: 0px 50px 20px 25px;
+  padding: 0 50px 20px 25px;
   line-height: 2.2rem;
+  transition: color 0.3s ease;
+}
+
+.part p:hover {
+  color: var(--hover-color);
+}
+
+.part ul li li {
+  padding-left: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+
+  .container h1 {
+    font-size: 3rem;
+  }
+
+  .parts h2 {
+    font-size: 2rem;
+  }
+
+  .part p {
+    padding: 0 20px 15px;
+  }
 }
