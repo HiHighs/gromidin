@@ -9,10 +9,14 @@ import digital_farming_2 from '../assets/mission/digital_farming_2.jpg';
 import digital_farming_3 from '../assets/mission/digital_farming_3.jpg';
 import digital_farming_4 from '../assets/mission/digital_farming_4.jpg';
 import flanders from '../assets/mission/flanders.jpg';
+import { useLocation } from 'react-router-dom';
 
 function Mission() {
+  const location = useLocation();
+  const part = new URLSearchParams(location.search).get('part');
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0); // Add state for active index
+  const [activeIndex, setActiveIndex] = useState(Number(part) - 1);
   const containerRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
