@@ -16,7 +16,7 @@ function Mission() {
   const part = new URLSearchParams(location.search).get('part');
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(Number(part) - 1);
+  const [activeIndex, setActiveIndex] = useState(part ? Number(part) - 1 : 0);
   const containerRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
