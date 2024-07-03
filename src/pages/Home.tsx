@@ -51,8 +51,8 @@ function Home() {
             </p>
             <p>
               Contact us on +32 476 45 23 63 or via mail{' '}
-              <a href='mailto:info@gromidin.com'>
-                <strong>info@gromidin.com</strong>
+              <a href='mailto:michel.degroote@gmail.com'>
+                <strong>michel.degroote@gmail.com</strong>
               </a>
             </p>
           </div>

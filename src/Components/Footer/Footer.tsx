@@ -14,7 +14,9 @@ function Footer() {
         <p>
           Tel:
           <a href='tel:+32476452363'>+32(0) 476 45 23 63</a> |{' '}
-          <a href='mailto:info@gromidin.com'>info@gromidin.com</a>
+          <a href='mailto:michel.degroote@gmail.com'>
+            michel.degroote@gmail.com
+          </a>
         </p>
 
         <Link className={styles.contact} to='contact'>

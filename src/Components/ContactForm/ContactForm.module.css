@@ -1,13 +1,11 @@
+/* Main Contact Form Styling */
 .contactForm {
   background-color: var(--lighter-green);
   border: 1px solid var(--darker-green);
   padding: 30px;
-  /* border-radius: 10px; */
-
   max-width: 800px;
   margin: 50px auto;
   margin-bottom: 80px;
-
   text-align: left;
 }
 
@@ -15,6 +13,7 @@
   max-width: 100%;
 }
 
+/* Form Container Styling */
 .formContainer {
   margin-bottom: 20px;
 }
@@ -25,9 +24,7 @@
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ced4da;
-
-  border: 1px solid transparent;
+  border: 1px solid transparent; /* Removed redundant border property */
   background-color: var(--basic-color);
 }
 
@@ -38,7 +35,7 @@
 }
 
 .formContainer textarea {
-  resize: vertical; /* Allow vertical resize */
+  resize: vertical;
 }
 
 .formContainer label {
@@ -47,6 +44,7 @@
   color: var(--darkest-green);
 }
 
+/* Submit Button Styling */
 .submit {
   background-color: var(--darker-green);
   color: var(--basic-color);
@@ -54,17 +52,66 @@
   font-size: 16px;
   cursor: pointer;
   transition: all 0.4s ease;
-
   border: none;
+  width: 90px;
 }
 
 .submit:hover {
   background-color: var(--darkest-green);
 }
 
+.submit:disabled {
+  cursor: not-allowed;
+}
+
+/* Additional Text Styling */
 .contactForm p {
   font-size: 1.8rem;
   padding-bottom: 30px;
   color: var(--darkest-green);
   opacity: 90%;
+}
+
+/* Back Button Styling */
+.back {
+  background-color: var(--darker-green);
+  color: var(--basic-color);
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: none;
+  opacity: 90%;
+}
+
+.back:hover {
+  opacity: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 850px) {
+  .contactForm {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Loader Styling */
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid var(--basic-color);
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
