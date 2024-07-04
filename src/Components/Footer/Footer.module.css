@@ -1,5 +1,4 @@
 .footer {
-  background-color: var(--lighter-green);
   padding: 50px 0 60px;
 }
 
@@ -10,33 +9,80 @@
 
 .footer p {
   font-size: 1.8rem;
-  color: var(--darker-green);
   margin-bottom: 10px;
 }
 
 .footer p a {
-  color: var(--dark-green);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .footer p a:hover {
-  color: var(--light-green);
   transition: all 0.3s ease;
 }
 
 .contact {
   margin-top: 30px;
   display: inline-block;
-  color: var(--basic-color);
-  background-color: var(--dark-green);
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 15px;
   text-decoration: none;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
+/* Colors section */
+.basicColor {
+  color: var(--basic-color);
+  font-weight: 100 !important;
+}
+
+.lightGreen {
+  color: var(--light-green);
+}
+.lightGreenBG {
+  background-color: var(--light-green);
+}
+.lightGreen:hover {
+  color: var(--dark-green);
+}
+
+.lighterGreen {
+  color: var(--lighter-green);
+}
+.lighterGreenBG {
+  background-color: var(--lighter-green);
+}
+.container .lighterGreenBG:hover {
+  background-color: var(--light-green);
+}
+
+.darkGreen {
+  color: var(--dark-green);
+}
+.darkGreenBG {
+  background-color: var(--dark-green);
+}
+.darkGreenBG:hover {
+  background-color: var(--darker-green);
+}
+.darkGreen:hover {
+  color: var(--light-green);
+}
+
+.darkerGreen {
+  color: var(--darker-green);
+}
+.darkerGreenBG {
+  background-color: var(--darker-green);
+}
+
+.heavy {
+  font-weight: 600;
+}
+
+/* Responsive section */
 @media screen and (max-width: 450px) {
   .footer p {
     padding: 0px 30px;

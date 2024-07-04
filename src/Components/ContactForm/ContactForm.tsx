@@ -89,7 +89,9 @@ function ContactForm() {
         </>
       ) : (
         <div>
-          <p>Your message has been successfully sent! &#10003;</p>
+          <p>
+            Your message has been successfully sent! <strong>&#10003;</strong>
+          </p>
           <button className={styles.back} onClick={() => setSubmitted(false)}>
             Send another message
           </button>

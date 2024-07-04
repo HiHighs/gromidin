@@ -4,10 +4,12 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 import Mission from './pages/Mission';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route index element={<Home />} />
         <Route path='/mission' element={<Mission />} />

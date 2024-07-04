@@ -180,7 +180,7 @@ function Mission() {
         </div>
       )}
 
-      {!mobileMenuOpen && <Footer />}
+      {!mobileMenuOpen && <Footer color='light' />}
     </>
   );
 }

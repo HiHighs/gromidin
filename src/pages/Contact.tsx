@@ -42,7 +42,7 @@ function Contact() {
       )}
       {!mobileMenuOpen && <ContactForm />}
       {!mobileMenuOpen && <MapLeaf address='Bergenstraat 158, 3052 Blanden' />}
-      {!mobileMenuOpen && <Footer />}
+      {!mobileMenuOpen && <Footer color='light' />}
     </>
   );
 }
