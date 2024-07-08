@@ -8,7 +8,7 @@
   font-size: 1.7rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px 80px 20px;
+  padding: 40px 10px 80px 10px;
   background: var(--lighter-green);
   color: var(--darker-green);
   /* border-radius: 10px;
@@ -44,4 +44,20 @@
 
 .content li:hover {
   color: var(--hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    padding: 0 20px 15px;
+  }
 }
