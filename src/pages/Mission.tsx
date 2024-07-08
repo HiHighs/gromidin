@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Navigation from '../Components/Navigation/Navigation';
 import Footer from '../Components/Footer/Footer';
 import styles from './Mission.module.css';
@@ -17,11 +17,6 @@ function Mission() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(part ? Number(part) - 1 : 0);
-  const containerRef = useRef<null | HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (containerRef.current) containerRef.current.scrollIntoView();
-  }, []);
 
   const selectors = [
     'Consulting in Crop Protection',
@@ -128,59 +123,61 @@ function Mission() {
       />
 
       {!mobileMenuOpen && (
-        <div ref={containerRef} className={styles.container}>
-          <h1>Mission</h1>
+        <div className={styles.container}>
+          <div className={styles.content}>
+            <div>
+              <h2>
+                <strong>GROMIDIN</strong> wants to:
+              </h2>
+              <ul className={styles.goals}>
+                <li>
+                  Be a <strong>consulting</strong> partner for R&D / Regulatory
+                  companies
+                </li>
+                <li>
+                  Be an <strong>advising</strong> partner for Distributors
+                </li>
+                <li>
+                  Be a <strong>training</strong> partner for farmers
+                </li>
+              </ul>
+              <p>... with focus on 3 parts:</p>
 
-          <div>
-            <p>Gromidin wants to:</p>
-            <ul className={styles.goals}>
-              <li>
-                Be a <strong>consulting</strong> partner for R&D / Regulatory
-                companies
-              </li>
-              <li>
-                Be an <strong>advising</strong> partner for Distributors
-              </li>
-              <li>
-                Be a <strong>training</strong> partner for farmers
-              </li>
-            </ul>
-            <p>... with focus on 3 parts:</p>
+              {selectors.map((text, index) => (
+                <div
+                  key={index}
+                  className={`${styles.selector} ${
+                    index === activeIndex ? styles.active : ''
+                  }`}
+                  onClick={() => setActiveIndex(index)} // Update active index on click
+                >
+                  {text}
+                  {index === activeIndex && (
+                    <div className={styles.checked}>✓</div>
+                  )}{' '}
+                  {/* Render checkmark if active */}
+                </div>
+              ))}
 
-            {selectors.map((text, index) => (
-              <div
-                key={index}
-                className={`${styles.selector} ${
-                  index === activeIndex ? styles.active : ''
-                }`}
-                onClick={() => setActiveIndex(index)} // Update active index on click
-              >
-                {text}
-                {index === activeIndex && (
-                  <div className={styles.checked}>✓</div>
-                )}{' '}
-                {/* Render checkmark if active */}
-              </div>
-            ))}
-
-            <ol className={styles.parts}>
-              {parts.map(
-                (part, index) =>
-                  index === activeIndex && (
-                    <li key={index} className={styles.part}>
-                      <h2>
-                        <strong>{part.title}</strong>
-                      </h2>
-                      {part.content}
-                    </li>
-                  )
-              )}
-            </ol>
+              <ol className={styles.parts}>
+                {parts.map(
+                  (part, index) =>
+                    index === activeIndex && (
+                      <li key={index} className={styles.part}>
+                        <h2>
+                          <strong>{part.title}</strong>
+                        </h2>
+                        {part.content}
+                      </li>
+                    )
+                )}
+              </ol>
+            </div>
           </div>
         </div>
       )}
 
-      {!mobileMenuOpen && <Footer color='light' />}
+      {!mobileMenuOpen && <Footer color='dark' />}
     </>
   );
 }
