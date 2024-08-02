@@ -59,7 +59,7 @@ function Home() {
         </Header>
       )}
       {!mobileMenuOpen && <Objective ref={objectiveRef} />}
-      {!mobileMenuOpen && <Footer />}
+      {!mobileMenuOpen && <Footer color='light' />}
     </>
   );
 }
