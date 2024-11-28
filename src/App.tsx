@@ -8,7 +8,7 @@ import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/gromidin'>
       <ScrollToTop />
       <Routes>
         <Route index element={<Home />} />
