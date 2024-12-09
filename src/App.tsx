@@ -7,10 +7,8 @@ import Mission from './pages/Mission';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
-  const basename = import.meta.env.DEV ? '/' : '/gromidin/';
-
   return (
-    <Router basename={basename}>
+    <Router>
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
